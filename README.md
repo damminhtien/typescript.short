@@ -1,6 +1,7 @@
-# Typescript.short 
-Short and simple bullet points about Typescript :yellow_heart:
+Short and simple bullet points about Typescript 💛
+
 ## 1. Introduction
+
 + Typescript is the typed superset of Javascript that compiles (transpiles) to Javascript
 + Why Typescript rather writing in Javascript:
   + Typescript as its name adds type(s) enforcement which Javascript wont
@@ -13,7 +14,9 @@ function sayHi(name?: string = 'world'): string {
 } 
 console.log(sayHi('world'))
 ```
+
 ## 2. Types
+
 + number
 ```typescript
 const n: number = 100
@@ -47,7 +50,9 @@ enum greeting = { hello, hi, xinchao }
 const greeting Array<string> = [ 'hello', 'hi', 'xinchao' ]
 const fruit string[] = [ 🍏, 🍉,  🥝,  🍇,  🥑,  🥥 ]
 ```
+
 ## 3. Function
+
 + Rest parameters
 ```typescript
 function sayHiEveryOne(...names: Array<string>): string {
@@ -55,7 +60,9 @@ function sayHiEveryOne(...names: Array<string>): string {
 }
 sayHiEveryOne('Hi ', 'Type', "Script"); // returns 'Hi Type Script'
 ```
+
 ## 4. Interfaces
+
 ```typescript
 interface Person {
   name: string
@@ -83,7 +90,9 @@ function sayHi(name: string): string {
 
 const sayHiWorld: SaySmt = sayHi
 ```
+
 ### 5. Class
+
 + Simple class
 ```typescript
 class Person {
@@ -101,7 +110,9 @@ class Person {
 }
 ```
 + Abstract class
-> Note: The class which implements an abstract class must call super() in the constructor.
+
+> Note: The class which implements an abstract class must call super() in the constructor
+
 ```typescript
 class Person {
   abstract name: number
