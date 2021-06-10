@@ -67,17 +67,11 @@ sayHiEveryOne('Hi ', 'Type', "Script"); // returns 'Hi Type Script'
 interface Person {
   name: string
   age?: number
-  getAge: () => number // arrow function
-  getName(): string
 }
 
 const ps: Person = { 
   name: 'damminhtien'
   age: 18
-  getAge: () => 18
-  getName() {
-    return 'damminhtien'
-  }
 } 
 
 interface SaySmt {
