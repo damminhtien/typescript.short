@@ -58,11 +58,20 @@ sayHiEveryOne('Hi ', 'Type', "Script"); // returns 'Hi Type Script'
 ## 4. Interfaces
 ```typescript
 interface Person {
-  name: string,
-  age: number
+  name: string
+  age?: number
+  getAge: () => number // arrow function
+  getName(): string
 }
 
-const ps: Person = { name: 'damminhtien', age: 18 } 
+const ps: Person = { 
+  name: 'damminhtien'
+  age: 18
+  getAge: () => 18
+  getName() {
+    return 'damminhtien'
+  }
+} 
 
 interface SaySmt {
   (name: string): string
@@ -73,4 +82,39 @@ function sayHi(name: string): string {
 }
 
 const sayHiWorld: SaySmt = sayHi
+```
+### 5. Class
++ Simple class
+```typescript
+class Person {
+  readonly name: string
+  age?: number
+
+  constructor(name: string, age?: number) {
+    this.name = name
+    this.age = age
+  }
+
+  getAge(): number {
+    return this.age
+  }
+}
+```
++ Abstract class
+> Note: The class which implements an abstract class must call super() in the constructor.
+```typescript
+class Person {
+  abstract name: number
+  age: string
+
+  abstract getAge(): number
+}
+
+class Lover extends Person {
+  name: string
+  age: number
+  
+  constructor() {
+  }
+}
 ```
