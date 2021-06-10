@@ -88,6 +88,7 @@ const sayHiWorld: SaySmt = sayHi
 ### 5. Class
 
 + Simple class
+
 ```typescript
 class Person {
   readonly name: string
@@ -122,4 +123,66 @@ class Lover extends Person {
   constructor() {
   }
 }
+```
++ Data modifiers
+  + public
+  
+  By default, all members of a class in TypeScript are public. All the public members can be accessed anywhere without any restrictions.
+  
+  ```typescript
+  class Dog {
+    name: string
+    public color: string
+  }
+  let dog = new Dog()
+  dog.name = 'Ki'
+  dog.color = 'white'
+  ```
+  + private
+  
+  The private access modifier ensures that class members are visible only to that class and are not accessible outside the containing class.
+  
+  ```typescript
+  class Dog {
+    name: string
+    private color: string
+  }
+  let dog = new Dog()
+  dog.name = 'Ki'
+  dog.color = 'white' // error 
+  ```
+  + protected
+  
+  The protected access modifier is similar to the private access modifier, except that protected members can be accessed using their deriving classes.
+  
+  ```typescript
+  class Animal {
+    protected name: string
+    constructor(name: string) {
+      this.name = name
+    }
+  }
+  class Dog extends Animal{
+    public color: string
+    constructor(name: string, color: string) {
+      super(name)
+      this.color = color
+    }
+  }
+  let dog = new Dog()
+  dog.name = 'Ki' // error
+  dog.color = 'white'
+  ```
++ static
+
+```typescript
+class Color {
+  static BLUE: number = '#0000FF'
+  
+  static getBlue(): string {
+    return '#0000FF'
+  }
+}
+let blue = Color.BLUE // '#0000FF'
+let getBlue = Color.getBlue() // '#0000FF'
 ```
