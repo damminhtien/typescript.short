@@ -186,3 +186,16 @@ class Color {
 let blue = Color.BLUE // '#0000FF'
 let getBlue = Color.getBlue() // '#0000FF'
 ```
+
++ generic classes
+
+```typescript
+class Mac<Type> {
+  version: Type;
+  constructor(v: Type) {
+    this.version = v;
+  }
+}
+
+const b: Mac<string> = new Mac("hello!"); // 
+```
