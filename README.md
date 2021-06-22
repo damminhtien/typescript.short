@@ -199,3 +199,15 @@ class Mac<Type> {
 
 const b: Mac<string> = new Mac("hello!"); // 
 ```
+
+### 6. [Decorator](https://saul-mirone.github.io/a-complete-guide-to-typescript-decorator/)
+
++ Class Decorators
+
++ Property Decorators
+
++ Method Decorators
+
++ Accessor Decorators
+
++ Parameter Decorators
